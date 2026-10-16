@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Users from "../users/users";
 import Cart from "../cart/Cart";
 import Products from "../products/Products";
+import Count from "../counter/Count";
 export default function Dashboard() {
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -22,9 +23,10 @@ export default function Dashboard() {
 
       <p>You have successfully logged in.</p>
 
-      <Users />
+      {/* <Users />
       <Cart />
-      <Products />
+      <Products /> */}
+      <Count />
 
       <button onClick={handleLogout}>
         Logout
